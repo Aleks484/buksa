@@ -1,0 +1,994 @@
+Subject: [PATCH] finish
+---
+Index: app/src/main/java/com/example/buksa/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/buksa/MainActivity.java b/app/src/main/java/com/example/buksa/MainActivity.java
+new file mode 100644
+--- /dev/null	(revision 2c062b6d3ee308baa276fc81de02751e9f0e9f47)
++++ b/app/src/main/java/com/example/buksa/MainActivity.java	(revision 2c062b6d3ee308baa276fc81de02751e9f0e9f47)
+@@ -0,0 +1,244 @@
++package com.example.buksa;
++
++import static java.lang.Double.valueOf;
++
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++import android.widget.TextView;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++public class MainActivity extends AppCompatActivity {
++
++    private TextView editTextNumberDecimal;
++    private TextView editTextNumberDecimal4;
++    private TextView editTextNumberDecimal5;
++    private TextView textView4;
++
++   private Button button;
++
++
++    private TextView editTextNumberDecimal2;
++    private TextView editTextNumberDecimal6;
++    private TextView editTextNumberDecimal7;
++
++    private TextView textView14;
++    private TextView textView15;
++    private Button button2;
++
++
++    private TextView editTextNumberDecimal3;
++    private TextView editTextNumberDecimal8;
++    private TextView editTextNumberDecimal9;
++
++    private TextView textView17;
++    private TextView textView18;
++    private Button button3;
++
++
++    private Button button4;
++
++
++
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++
++        // Инициализация элементов интерфейса
++        editTextNumberDecimal = findViewById(R.id.editTextNumberDecimal);
++        editTextNumberDecimal4 = findViewById(R.id.editTextNumberDecimal4);
++        editTextNumberDecimal5 = findViewById(R.id.editTextNumberDecimal5);
++        textView4 = findViewById(R.id.textView4);
++        button = findViewById(R.id.button);
++
++        editTextNumberDecimal2= findViewById(R.id.editTextNumberDecimal2);
++        editTextNumberDecimal6 = findViewById(R.id.editTextNumberDecimal6);
++        editTextNumberDecimal7 = findViewById(R.id.editTextNumberDecimal7);
++        textView14 = findViewById(R.id.textView14);
++        textView15 = findViewById(R.id.textView15);
++        button2 = findViewById(R.id.button2);
++
++        editTextNumberDecimal3= findViewById(R.id.editTextNumberDecimal3);
++        editTextNumberDecimal8 = findViewById(R.id.editTextNumberDecimal8);
++        editTextNumberDecimal9 = findViewById(R.id.editTextNumberDecimal9);
++        textView17 = findViewById(R.id.textView17);
++        textView18 = findViewById(R.id.textView18);
++        button3 = findViewById(R.id.button3);
++
++        button4 = findViewById(R.id.button4);
++
++        // Настройка обработчика нажатия на кнопку
++        button.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++        //Считаем с editText и editText2 текстовые значения
++        String S = editTextNumberDecimal.getText().toString();
++        String S4 = editTextNumberDecimal4.getText().toString();
++        String S5 = editTextNumberDecimal5.getText().toString();
++
++
++                double a, a4, a5, c1 = 0;
++
++
++                //Преобразуем текстовые переменные в числовые значения
++
++                a = Double.parseDouble(S);
++                a4 = Double.parseDouble(S4);
++                a5 = Double.parseDouble(S5);
++
++
++
++                //Проведем с числовыми переменными нужные действия
++
++
++                  c1 = ((a4 - a5) - a) / 2.0;
++
++
++
++                //Преобразуем ответ в число
++                String Sres1 = Double.toString(c1);
++
++
++
++                //Выведем текст в textView
++                textView4.setText(Sres1);
++
++
++
++
++
++
++
++            }
++        });
++
++        // Настройка обработчика нажатия на кнопку
++        button2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                //Считаем с editText и editText2 текстовые значения
++
++                String S2 = editTextNumberDecimal2.getText().toString();
++                String S6 = editTextNumberDecimal6.getText().toString();
++                String S7 = editTextNumberDecimal7.getText().toString();
++
++
++
++                double a2,a6,a7,c2;
++
++
++                //Преобразуем текстовые переменные в числовые значения
++
++
++                a2 = Double.parseDouble(S2);
++                a6 = Double.parseDouble(S6);
++                a7 = Double.parseDouble(S7);
++
++
++                //Проведем с числовыми переменными нужные действия
++
++
++                c2 = ((a7 - a6) - a2) / 2.0;
++
++
++                //Преобразуем ответ в число
++                String Sres2 = Double.toString(Math.abs(c2));
++
++                //Выведем текст в textView
++
++                if(c2<0)
++                    textView14.setText("влево");
++                if(c2>0)
++                    textView14.setText("вправо");
++
++
++                textView15.setText(Sres2);
++
++            }
++        });
++
++
++        // Настройка обработчика нажатия на кнопку
++        button3.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                //Считаем с editText и editText2 текстовые значения
++
++                String S3 = editTextNumberDecimal3.getText().toString();
++                String S8 = editTextNumberDecimal8.getText().toString();
++                String S9 = editTextNumberDecimal9.getText().toString();
++
++
++                double a3,a8,a9,c3;
++
++
++                //Преобразуем текстовые переменные в числовые значения
++
++
++                a3 = Double.parseDouble(S3);
++                a8 = Double.parseDouble(S8);
++                a9 = Double.parseDouble(S9);
++
++
++                //Проведем с числовыми переменными нужные действия
++
++
++                c3 = ((a8 - a9) - a3) / 2.0;
++
++
++
++                //Преобразуем ответ в число
++                String Sres3 = Double.toString(Math.abs(c3));
++
++                //Выведем текст в textView
++
++                if(c3<0)
++                    textView17.setText("влево");
++                if(c3>0)
++                    textView17.setText("вправо");
++
++
++                textView18.setText(Sres3);
++
++            }
++        });
++
++
++        // Настройка обработчика нажатия на кнопку
++        button4.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                //Выведем текст в textView
++
++                editTextNumberDecimal.setText("7.8");
++                editTextNumberDecimal4.setText(" ");
++                editTextNumberDecimal5.setText(" ");
++                textView4.setText(" ");
++
++                editTextNumberDecimal2.setText("1.8");
++                editTextNumberDecimal6.setText(" ");
++                editTextNumberDecimal7.setText(" ");
++                textView14.setText("             ");
++                textView15.setText("             ");
++
++                editTextNumberDecimal3.setText("1.8");
++                editTextNumberDecimal8.setText(" ");
++                editTextNumberDecimal9.setText(" ");
++                textView17.setText("             ");
++                textView18.setText("             ");
++
++
++            }
++        });
++
++
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision b136e6df4174b3379ca4fa6f97a244e25e801704)
++++ b/app/src/main/res/layout/activity_main.xml	(revision 2c062b6d3ee308baa276fc81de02751e9f0e9f47)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++
++<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/main"
+@@ -7,274 +8,445 @@
+     android:layout_height="match_parent"
+     tools:context=".MainActivity">
+ 
+-    <TextView
+-        android:id="@+id/textView"
+-        android:layout_width="240dp"
+-        android:layout_height="36dp"
+-        android:layout_marginTop="48dp"
+-        android:text="Расчет разности разиеров буксы"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.497"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="vertical"
++        >
++
++
++        <TextView
++            android:id="@+id/textView"
++            android:layout_width="350dp"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="16dp"
++            android:text="     Расчет разности разиеров буксы"
++            android:textSize="20sp"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="030"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
+ 
+-    <TextView
+-        android:id="@+id/textView2"
+-        android:layout_width="66dp"
+-        android:layout_height="22dp"
+-        android:layout_marginStart="96dp"
+-        android:layout_marginTop="48dp"
+-        android:text="размер"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView" />
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="horizontal">
++
++            <TextView
++                android:id="@+id/textView2"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="40dp"
++                android:layout_marginTop="28dp"
++                android:text="размер"
++                android:textSize="20sp"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/textView" />
+ 
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal"
+-        android:layout_width="67dp"
+-        android:layout_height="32dp"
+-        android:layout_marginStart="13dp"
+-        android:layout_marginTop="48dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView2"
+-        app:layout_constraintTop_toBottomOf="@+id/textView" />
++            <EditText
++                android:id="@+id/editTextNumberDecimal"
++                android:layout_width="63dp"
++                android:layout_height="48dp"
++                android:layout_marginStart="72dp"
++                android:layout_marginTop="28dp"
++                android:ems="10"
++                android:inputType="numberDecimal"
++                android:text="8"
++                app:layout_constraintStart_toEndOf="@+id/textView2"
++                app:layout_constraintTop_toBottomOf="@+id/textView" />
++        </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
+ 
+-    <TextView
+-        android:id="@+id/textView3"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="96dp"
+-        android:layout_marginTop="104dp"
+-        android:text="ORA,n,   Y"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
++        <TextView
++            android:id="@+id/textView11"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="36dp"
++            android:layout_marginTop="15dp"
++            android:text="верхний"
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView2" />
++
++        <EditText
++            android:id="@+id/editTextNumberDecimal4"
++            android:layout_width="59dp"
++            android:layout_height="41dp"
++            android:layout_marginStart="72dp"
++            android:layout_marginTop="8dp"
++            android:ems="10"
++
++            android:inputType="numberDecimal"
++            app:layout_constraintStart_toEndOf="@+id/textView11"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
++    </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
++
++        <TextView
++            android:id="@+id/textView12"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="36dp"
++            android:layout_marginTop="15dp"
++            android:text="нижний"
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView11" />
++
++        <EditText
++            android:id="@+id/editTextNumberDecimal5"
++            android:layout_width="60dp"
++            android:layout_height="42dp"
++            android:layout_marginStart="76dp"
++            android:layout_marginTop="8dp"
++            android:ems="10"
++            android:inputType="numberDecimal"
++
++            app:layout_constraintStart_toEndOf="@+id/textView12"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal4" />
++    </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="horizontal">
++
++
++            <TextView
++                android:id="@+id/textView3"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="40dp"
++                android:layout_marginTop="35dp"
++                android:text="ORA,n,   Y"
++                android:textSize="20sp"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+ 
+-    <TextView
+-        android:id="@+id/textView4"
+-        android:layout_width="39dp"
+-        android:layout_height="22dp"
+-        android:layout_marginStart="20dp"
+-        android:layout_marginTop="104dp"
+-        android:text="TextView"
+-        app:layout_constraintStart_toEndOf="@+id/textView3"
+-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
++            <TextView
++                android:id="@+id/textView4"
++                android:layout_width="50dp"
++                android:layout_height="22dp"
++                android:layout_marginStart="16dp"
++                android:layout_marginTop="30dp"
++                android:textSize="20sp"
++                app:layout_constraintStart_toEndOf="@+id/textView3"
++                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+ 
++            <Button
++                android:id="@+id/button"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="20dp"
++                android:layout_marginTop="35dp"
++                android:rotationX="6"
++                android:text="посчитать"
++                app:layout_constraintStart_toEndOf="@+id/textView4"
++                app:layout_constraintTop_toBottomOf="@+id/textView" />
++        </LinearLayout>
++
++        <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
+     <TextView
+         android:id="@+id/textView5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginStart="92dp"
+-        android:layout_marginTop="48dp"
+-        android:text="размер"
++        android:layout_marginStart="20dp"
++        android:layout_marginTop="32dp"
++        android:text=" размер ближний"
++        android:textSize="20sp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+ 
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal2"
+-        android:layout_width="75dp"
+-        android:layout_height="38dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="37dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView5"
+-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
++
++            <EditText
++                android:id="@+id/editTextNumberDecimal2"
++                android:layout_width="75dp"
++                android:layout_height="38dp"
++                android:layout_marginStart="35dp"
++                android:layout_marginTop="36dp"
++                android:ems="10"
++                android:inputType="numberDecimal"
++                android:text="1.8"
++                app:layout_constraintStart_toEndOf="@+id/textView5"
++                app:layout_constraintTop_toBottomOf="@+id/textView4" />
++    </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
+ 
+-    <TextView
+-        android:id="@+id/textView6"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="96dp"
+-        android:layout_marginTop="28dp"
+-        android:text="левый"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
++        <TextView
++            android:id="@+id/textView6"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="80dp"
++            android:layout_marginTop="6dp"
++            android:text="левый"
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+ 
+-    <TextView
+-        android:id="@+id/textView8"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="92dp"
+-        android:layout_marginTop="128dp"
+-        android:text="размер"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+-
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal3"
+-        android:layout_width="73dp"
+-        android:layout_height="45dp"
+-        android:layout_marginStart="20dp"
+-        android:layout_marginTop="17dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView8"
+-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+-
+-    <TextView
+-        android:id="@+id/textView9"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="92dp"
+-        android:layout_marginTop="24dp"
+-        android:text="левый"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+-
+-    <TextView
+-        android:id="@+id/textView11"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="94dp"
+-        android:layout_marginTop="22dp"
+-        android:text="верхний"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+-
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal4"
+-        android:layout_width="59dp"
+-        android:layout_height="41dp"
+-        android:layout_marginStart="28dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView11"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+-
+-    <TextView
+-        android:id="@+id/textView12"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="97dp"
+-        android:layout_marginTop="21dp"
+-        android:text="TextView"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+-
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal5"
+-        android:layout_width="53dp"
+-        android:layout_height="35dp"
+-        android:layout_marginStart="26dp"
+-        android:layout_marginTop="2dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView12"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal4" />
+-
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal6"
+-        android:layout_width="75dp"
+-        android:layout_height="44dp"
+-        android:layout_marginStart="15dp"
+-        android:layout_marginTop="1dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView6"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
++        <EditText
++            android:id="@+id/editTextNumberDecimal6"
++            android:layout_width="75dp"
++            android:layout_height="44dp"
++            android:layout_marginStart="75dp"
++            android:layout_marginTop="4dp"
++            android:ems="10"
++            android:inputType="numberDecimal"
++            app:layout_constraintStart_toEndOf="@+id/textView6"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
++    </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
+ 
+-    <TextView
+-        android:id="@+id/textView13"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="88dp"
+-        android:layout_marginTop="24dp"
+-        android:text="правый"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
++        <TextView
++            android:id="@+id/textView16"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="64dp"
++            android:layout_marginTop="0dp"
++            android:text="правый"
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+ 
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal7"
+-        android:layout_width="75dp"
+-        android:layout_height="39dp"
+-        android:layout_marginStart="20dp"
+-        android:layout_marginTop="12dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView13"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal6" />
++        <EditText
++            android:id="@+id/editTextNumberDecimal7"
++            android:layout_width="75dp"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="80dp"
++            android:layout_marginTop="4dp"
++            android:ems="10"
++            android:inputType="numberDecimal"
++            app:layout_constraintStart_toEndOf="@+id/textView13"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal6" />
+ 
+-    <TextView
+-        android:id="@+id/textView14"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="85dp"
+-        android:layout_marginTop="32dp"
+-        android:text="TextView"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
++
++    </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
++
++        <TextView
++            android:id="@+id/textView14"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="28dp"
++            android:layout_marginTop="8dp"
++            android:text="              "
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+ 
+-    <TextView
+-        android:id="@+id/textView15"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="14dp"
+-        android:text="TextView"
+-        app:layout_constraintStart_toEndOf="@+id/textView14"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal7" />
++        <TextView
++            android:id="@+id/textView15"
++            android:layout_width="41dp"
++            android:layout_height="27dp"
++            android:layout_marginStart="12dp"
++            android:layout_marginTop="8dp"
++            android:text="            "
++            android:textSize="20sp"
++            app:layout_constraintStart_toEndOf="@+id/textView14"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal7" />
++
++        <Button
++            android:id="@+id/button2"
++            android:layout_width="125dp"
++            android:layout_height="45dp"
++            android:layout_marginStart="36dp"
++            android:layout_marginTop="8dp"
++            android:text="посчитать"
++            app:layout_constraintStart_toEndOf="@+id/textView15"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal7" />
++    </LinearLayout>
++
++
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
++
++        <TextView
++            android:id="@+id/textView8"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="16dp"
++            android:layout_marginTop="12dp"
++            android:text="размер дальний"
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView6" />
++
++        <EditText
++            android:id="@+id/editTextNumberDecimal3"
++            android:layout_width="73dp"
++            android:layout_height="45dp"
++            android:layout_marginStart="45dp"
++            android:layout_marginTop="16dp"
++            android:ems="10"
++            android:inputType="numberDecimal"
++            android:text="1.8"
++            app:layout_constraintStart_toEndOf="@+id/textView8"
++            app:layout_constraintTop_toBottomOf="@+id/textView15" />
++    </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
++
++        <TextView
++            android:id="@+id/textView9"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="68dp"
++            android:layout_marginTop="8dp"
++            android:text="левый"
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+ 
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal8"
+-        android:layout_width="74dp"
+-        android:layout_height="43dp"
+-        android:layout_marginStart="28dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView9"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal3" />
++        <EditText
++            android:id="@+id/editTextNumberDecimal8"
++            android:layout_width="74dp"
++            android:layout_height="43dp"
++            android:layout_marginStart="85dp"
++            android:layout_marginTop="8dp"
++            android:ems="10"
++            android:inputType="numberDecimal"
++            app:layout_constraintStart_toEndOf="@+id/textView9"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal3" />
++    </LinearLayout>
++
++
++
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
+ 
+-    <TextView
+-        android:id="@+id/textView16"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="96dp"
+-        android:layout_marginTop="20dp"
+-        android:text="правый"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
++        <TextView
++            android:id="@+id/textView13"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="70dp"
++            android:layout_marginTop="8dp"
++            android:text="правый"
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+ 
+-    <EditText
+-        android:id="@+id/editTextNumberDecimal9"
+-        android:layout_width="62dp"
+-        android:layout_height="29dp"
+-        android:layout_marginStart="20dp"
+-        android:layout_marginTop="12dp"
+-        android:ems="10"
+-        android:inputType="numberDecimal"
+-        app:layout_constraintStart_toEndOf="@+id/textView16"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal8" />
++        <EditText
++            android:id="@+id/editTextNumberDecimal9"
++            android:layout_width="72dp"
++            android:layout_height="43dp"
++            android:layout_marginStart="70dp"
++            android:layout_marginTop="0dp"
++            android:ems="10"
++            android:inputType="numberDecimal"
++            app:layout_constraintStart_toEndOf="@+id/textView16"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal8" />
+ 
+-    <TextView
+-        android:id="@+id/textView17"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="92dp"
+-        android:layout_marginTop="24dp"
+-        android:text="TextView"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
++    </LinearLayout>
++
++
++
++
++
++
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
++
++
++        <TextView
++            android:id="@+id/textView17"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="28dp"
++            android:layout_marginTop="8dp"
++            android:text="                "
++            android:textSize="20sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+ 
+-    <TextView
+-        android:id="@+id/textView18"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="16dp"
+-        android:text="TextView"
+-        app:layout_constraintStart_toEndOf="@+id/textView17"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal9" />
++        <TextView
++            android:id="@+id/textView18"
++            android:layout_width="47dp"
++            android:layout_height="26dp"
++            android:layout_marginStart="12dp"
++            android:layout_marginTop="8dp"
++            android:text="           "
++            android:textSize="20sp"
++            app:layout_constraintStart_toEndOf="@+id/textView17"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal9" />
+ 
+-    <Button
+-        android:id="@+id/button"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="159dp"
+-        android:layout_marginTop="10dp"
+-        android:text="СБРОС"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
++        <Button
++            android:id="@+id/button3"
++            android:layout_width="121dp"
++            android:layout_height="41dp"
++            android:layout_marginStart="32dp"
++            android:layout_marginTop="4dp"
++            android:text="Посчитать"
++            app:layout_constraintStart_toEndOf="@+id/textView18"
++            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal9" />
++    </LinearLayout>
++
++        <Button
++            android:id="@+id/button4"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="150dp"
++            android:layout_marginTop="20dp"
++            android:text="СБРОС"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
++
++        <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content" />
+ 
+-    
+\ No newline at end of file
++    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
++        android:layout_height="wrap_content" />
++
++    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
++        android:layout_height="wrap_content" />
++
++        <TextView
++            android:id="@+id/textView10"
++            android:layout_width="match_parent"
++            android:layout_height="652dp" />
++
++        <TextView
++            android:id="@+id/textView19"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:text="С А В" />
++
++    </LinearLayout>
++</ScrollView>
+\ No newline at end of file
+Index: app/src/main/java/com/example/buksa/MainActivity.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/buksa/MainActivity.kt b/app/src/main/java/com/example/buksa/MainActivity.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/buksa/MainActivity.kt	(revision b136e6df4174b3379ca4fa6f97a244e25e801704)
++++ /dev/null	(revision b136e6df4174b3379ca4fa6f97a244e25e801704)
+@@ -1,20 +0,0 @@
+-package com.example.buksa
+-
+-import android.os.Bundle
+-import androidx.activity.enableEdgeToEdge
+-import androidx.appcompat.app.AppCompatActivity
+-import androidx.core.view.ViewCompat
+-import androidx.core.view.WindowInsetsCompat
+-
+-class MainActivity : AppCompatActivity() {
+-    override fun onCreate(savedInstanceState: Bundle?) {
+-        super.onCreate(savedInstanceState)
+-        enableEdgeToEdge()
+-        setContentView(R.layout.activity_main)
+-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+-            insets
+-        }
+-    }
+-}
+\ No newline at end of file

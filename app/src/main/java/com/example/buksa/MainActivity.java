@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView editTextNumberDecimal5;
     private TextView textView4;
 
-   private Button button;
+    private Button button;
 
 
     private TextView editTextNumberDecimal2;
@@ -73,12 +73,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-        //Считаем с editText и editText2 текстовые значения
-        String S = editTextNumberDecimal.getText().toString();
-        String S4 = editTextNumberDecimal4.getText().toString();
-        String S5 = editTextNumberDecimal5.getText().toString();
+                //Считаем с editText и editText2 текстовые значения
+                String S = editTextNumberDecimal.getText().toString();
+                String S4 = editTextNumberDecimal4.getText().toString();
+                String S5 = editTextNumberDecimal5.getText().toString();
 
 
+                double a, a4, a5, c1;
 
 
                 //Преобразуем текстовые переменные в числовые значения
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //Проведем с числовыми переменными нужные действия
 
+                c1 = ((a4 - a5) - a) / 2;
 
 
 
@@ -133,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 //Проведем с числовыми переменными нужные действия
 
 
+                c2 = ((a7 - a6) - a2) / 2;
 
 
                 //Преобразуем ответ в число
@@ -178,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
                 //Проведем с числовыми переменными нужные действия
 
 
+                c3 = ((a8 - a9) - a3) / 2;
 
 
 
@@ -213,14 +217,14 @@ public class MainActivity extends AppCompatActivity {
                 editTextNumberDecimal2.setText("1.8");
                 editTextNumberDecimal6.setText(" ");
                 editTextNumberDecimal7.setText(" ");
-                textView14.setText("             ");
-                textView15.setText("             ");
+                textView14.setText(" ");
+                textView15.setText(" ");
 
                 editTextNumberDecimal3.setText("1.8");
                 editTextNumberDecimal8.setText(" ");
                 editTextNumberDecimal9.setText(" ");
-                textView17.setText("             ");
-                textView18.setText("             ");
+                textView17.setText(" ");
+                textView18.setText(" ");
 
 
             }
