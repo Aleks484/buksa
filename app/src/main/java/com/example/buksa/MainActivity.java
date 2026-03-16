@@ -1,7 +1,5 @@
 package com.example.buksa;
 
-import static java.lang.Double.valueOf;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -81,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
         String S5 = editTextNumberDecimal5.getText().toString();
 
 
-                double a, a4, a5, c1 = 0;
 
 
                 //Преобразуем текстовые переменные в числовые значения
@@ -95,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
                 //Проведем с числовыми переменными нужные действия
 
 
-                  c1 = ((a4 - a5) - a) / 2.0;
-
 
 
                 //Преобразуем ответ в число
@@ -106,11 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
                 //Выведем текст в textView
                 textView4.setText(Sres1);
-
-
-
-
-
 
 
             }
@@ -143,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
                 //Проведем с числовыми переменными нужные действия
 
 
-                c2 = ((a7 - a6) - a2) / 2.0;
 
 
                 //Преобразуем ответ в число
@@ -189,7 +178,6 @@ public class MainActivity extends AppCompatActivity {
                 //Проведем с числовыми переменными нужные действия
 
 
-                c3 = ((a8 - a9) - a3) / 2.0;
 
 
 
