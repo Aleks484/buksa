@@ -20,6 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Button button;
 
+    private TextView editTextNumberDecimal20;
+    private TextView editTextNumberDecimal21;
+    private TextView editTextNumberDecimal22;
+
+    private TextView textView32;
+    private TextView textView31;
+
+    private Button button5;
+
+
 
     private TextView editTextNumberDecimal2;
     private TextView editTextNumberDecimal6;
@@ -57,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
         editTextNumberDecimal5 = findViewById(R.id.editTextNumberDecimal5);
         textView4 = findViewById(R.id.textView4);
         button = findViewById(R.id.button);
+
+        editTextNumberDecimal20 = findViewById(R.id.editTextNumberDecimal20);
+        editTextNumberDecimal21 = findViewById(R.id.editTextNumberDecimal21);
+        editTextNumberDecimal22 = findViewById(R.id.editTextNumberDecimal22);
+        textView31 = findViewById(R.id.textView31);
+        textView32 = findViewById(R.id.textView32);
+        button5 = findViewById(R.id.button5);
 
         editTextNumberDecimal2= findViewById(R.id.editTextNumberDecimal2);
         editTextNumberDecimal6 = findViewById(R.id.editTextNumberDecimal6);
@@ -104,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
                 c1 = ((a4 - a5) - a) / 2;
                 c20 = a4-a5;
 
+                //double c11 = Double.valueOf(String.format("%.3f", c1));
+                //double c201 = Double.valueOf(String.format("%.3f", c20));
+
 
 
                 //Преобразуем ответ в число
@@ -116,6 +136,58 @@ public class MainActivity extends AppCompatActivity {
                 textView4.setText(Sres1);
                 textView20.setText(Sres2);
 
+
+            }
+        });
+
+
+        // Настройка обработчика нажатия на кнопку
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Считаем с editText и editText2 текстовые значения
+
+                String S20 = editTextNumberDecimal20.getText().toString();
+                String S21 = editTextNumberDecimal21.getText().toString();
+                String S22 = editTextNumberDecimal22.getText().toString();
+
+
+
+                double a20,a21,a22,c5,c55;
+
+
+                //Преобразуем текстовые переменные в числовые значения
+
+
+                a20 = Double.parseDouble(S20);
+                a21 = Double.parseDouble(S21);
+                a22 = Double.parseDouble(S22);
+
+
+                //Проведем с числовыми переменными нужные действия
+
+
+                c5 = ((a22 - a21) - a20) / 2;
+
+
+                c55= a21-a22;
+
+              // Double  c51 = Double.valueOf(String.format("%.3f", c5));
+              //  Double  c52 = Double.valueOf(String.format("%.3f", c55));
+
+
+                //Преобразуем ответ в число
+                String Sres5 = Double.toString(c5);
+                String Sres55 = Double.toString(Math.abs(c55));
+
+                //Выведем текст в textView
+
+
+
+
+                textView31.setText(Sres5);
+                textView32.setText(Sres55);
 
             }
         });
@@ -149,6 +221,9 @@ public class MainActivity extends AppCompatActivity {
 
                 c2 = ((a7 - a6) - a2) / 2;
                 c22= a7-a6;
+
+                //double c21 = Double.valueOf(String.format("%.3f", c2));
+              //  double c221 = Double.valueOf(String.format("%.3f", c22));
 
 
                 //Преобразуем ответ в число
@@ -199,6 +274,9 @@ public class MainActivity extends AppCompatActivity {
                 c3 = ((a8 - a9) - a3) / 2;
                 c24 = a8-a9;
 
+              //  double c31 = Double.valueOf(String.format("%.3f", c3));
+               // double c241 = Double.valueOf(String.format("%.3f", c24));
+
 
 
                 //Преобразуем ответ в число
@@ -233,17 +311,23 @@ public class MainActivity extends AppCompatActivity {
                 textView20.setText(" ");
                 textView4.setText(" ");
 
+                editTextNumberDecimal20.setText("0");
+                editTextNumberDecimal21.setText(" ");
+                editTextNumberDecimal22.setText(" ");
+                textView31.setText(" ");
+                textView32.setText(" ");
+
                 editTextNumberDecimal2.setText("1.8");
                 editTextNumberDecimal6.setText(" ");
                 editTextNumberDecimal7.setText(" ");
-                textView14.setText(" ");
+                textView14.setText("              ");
                 textView15.setText(" ");
                 textView22.setText(" ");
 
                 editTextNumberDecimal3.setText("1.8");
                 editTextNumberDecimal8.setText(" ");
                 editTextNumberDecimal9.setText(" ");
-                textView17.setText(" ");
+                textView17.setText("                ");
                 textView18.setText(" ");
                 textView24.setText(" ");
 
