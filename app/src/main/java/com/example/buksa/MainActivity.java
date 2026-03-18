@@ -12,7 +12,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView editTextNumberDecimal;
     private TextView editTextNumberDecimal4;
     private TextView editTextNumberDecimal5;
+    private TextView textView20;
     private TextView textView4;
+
+
+    private TextView textView19;
 
     private Button button;
 
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView14;
     private TextView textView15;
+    private TextView textView22;
     private Button button2;
 
 
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView17;
     private TextView textView18;
+    private TextView textView24;
     private Button button3;
 
 
@@ -64,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         editTextNumberDecimal9 = findViewById(R.id.editTextNumberDecimal9);
         textView17 = findViewById(R.id.textView17);
         textView18 = findViewById(R.id.textView18);
+        textView20 = findViewById(R.id.textView20);
+        textView22 = findViewById(R.id.textView22);
+        textView24 = findViewById(R.id.textView24);
         button3 = findViewById(R.id.button3);
 
         button4 = findViewById(R.id.button4);
@@ -79,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 String S5 = editTextNumberDecimal5.getText().toString();
 
 
-                double a, a4, a5, c1;
+                double a, a4, a5, c1,c20;
 
 
                 //Преобразуем текстовые переменные в числовые значения
@@ -93,16 +102,19 @@ public class MainActivity extends AppCompatActivity {
                 //Проведем с числовыми переменными нужные действия
 
                 c1 = ((a4 - a5) - a) / 2;
+                c20 = a4-a5;
 
 
 
                 //Преобразуем ответ в число
                 String Sres1 = Double.toString(c1);
+                String Sres2 = Double.toString(Math.abs(c20));
 
 
 
                 //Выведем текст в textView
                 textView4.setText(Sres1);
+                textView20.setText(Sres2);
 
 
             }
@@ -121,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                double a2,a6,a7,c2;
+                double a2,a6,a7,c2,c22;
 
 
                 //Преобразуем текстовые переменные в числовые значения
@@ -136,10 +148,12 @@ public class MainActivity extends AppCompatActivity {
 
 
                 c2 = ((a7 - a6) - a2) / 2;
+                c22= a7-a6;
 
 
                 //Преобразуем ответ в число
                 String Sres2 = Double.toString(Math.abs(c2));
+                String Sres22 = Double.toString(Math.abs(c22));
 
                 //Выведем текст в textView
 
@@ -150,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 textView15.setText(Sres2);
+                textView22.setText(Sres22);
 
             }
         });
@@ -167,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 String S9 = editTextNumberDecimal9.getText().toString();
 
 
-                double a3,a8,a9,c3;
+                double a3,a8,a9,c3,c24;
 
 
                 //Преобразуем текстовые переменные в числовые значения
@@ -182,11 +197,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                 c3 = ((a8 - a9) - a3) / 2;
+                c24 = a8-a9;
 
 
 
                 //Преобразуем ответ в число
                 String Sres3 = Double.toString(Math.abs(c3));
+                String Sres24 = Double.toString(Math.abs(c24));
 
                 //Выведем текст в textView
 
@@ -197,6 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 textView18.setText(Sres3);
+                textView24.setText(Sres24);
 
             }
         });
@@ -209,9 +227,10 @@ public class MainActivity extends AppCompatActivity {
 
                 //Выведем текст в textView
 
-                editTextNumberDecimal.setText("7.8");
+                editTextNumberDecimal.setText("8");
                 editTextNumberDecimal4.setText(" ");
                 editTextNumberDecimal5.setText(" ");
+                textView20.setText(" ");
                 textView4.setText(" ");
 
                 editTextNumberDecimal2.setText("1.8");
@@ -219,12 +238,14 @@ public class MainActivity extends AppCompatActivity {
                 editTextNumberDecimal7.setText(" ");
                 textView14.setText(" ");
                 textView15.setText(" ");
+                textView22.setText(" ");
 
                 editTextNumberDecimal3.setText("1.8");
                 editTextNumberDecimal8.setText(" ");
                 editTextNumberDecimal9.setText(" ");
                 textView17.setText(" ");
                 textView18.setText(" ");
+                textView24.setText(" ");
 
 
             }
